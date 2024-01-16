@@ -1,0 +1,54 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: blueviolet;
+  color:#eff3f4;
+}
+
+body {
+  font-family: system-ui;
+  padding: 20rem 3rem;
+  background-color: #060e13;
+  color:#eff3f4;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  color: #060e13
+}
+
+section > div {
+  background-color: #eff3f4;
+  padding: 1rem;
+  box-shadow: 0 0 1rem hsl(0 0% 0% / 0.15);
+}
+
+div:has(h1) {
+  background-color: hotpink;
+}
+
+div:has(p) {
+  background-color: limegreen;
+}
+
+div:has(p:empty) {
+  background: firebrick;
+}
+
+div:has(> .fancy-paragraph) {
+  // background-color:aquamarine;
+  background: red;
+  .fancy-paragraph{
+    color: rebeccapurple;
+    background: white;
+    padding: 10px;
+    font-size: .75em;
+  }
+}
+
+div:has(> a) {
+  background: steelblue;
+}
+
